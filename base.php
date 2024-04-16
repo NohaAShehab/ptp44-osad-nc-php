@@ -8,7 +8,7 @@ echo '
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 
-echo "<div class='container fs-1'> <pre>";
+echo "<div class='container fs-4'> <pre>";
 
 
 
