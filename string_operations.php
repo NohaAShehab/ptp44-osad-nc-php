@@ -209,11 +209,15 @@ $password = "iti";
 $saved_password= md5($password);
 
 echo "{$saved_password} <br>";
-echo md5($password);
+//echo md5($password);
 
 //var_dump(strcmp($saved_password, md5($password)));
 
+var_dump(password_hash("iti", PASSWORD_DEFAULT));
+var_dump(password_hash("iti", PASSWORD_DEFAULT));
 
+$pass = password_hash("iti", PASSWORD_DEFAULT);
+var_dump(password_verify("iti", $pass));
 
 
 
