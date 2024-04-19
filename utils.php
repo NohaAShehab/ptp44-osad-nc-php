@@ -19,3 +19,30 @@ function display_in_table($rows){
     }
     echo "</table>";
 }
+
+
+
+
+function select_student($conn){
+
+    try{
+        $select_query = "select * from `php_nc44`.`students`";
+        $res = $conn->query($select_query);
+        $rows = $res->fetch_all();
+        display_in_table($rows);
+        $res->free();
+        $conn->close();
+
+    }catch (Exception $e){
+        echo "<h3 style='color: red'> {$e->getMessage()}</h3>";
+    }
+
+}
+
+
+
+
+
+
+
+
